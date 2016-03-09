@@ -1,0 +1,15 @@
+[package]
+name = "pdcurses-sys"
+version = "0.1.0"
+authors = ["Ilkka Halila <ilkka@hali.la>"]
+links = "pdcurses"
+build = "build.rs"
+
+[lib]
+name = "pdcurses"
+
+[build-dependencies]
+gcc = "0.3"
+
+[dependencies]
+libc = "*"
