@@ -1,8 +1,9 @@
 extern crate libc;
 
-use libc::{c_int, c_char};
+use libc::{c_char, c_int, c_short, c_void};
 
-pub type chtype = u64; /* chtypes will be (default) 64 bits */
+pub type chtype = u64; // chtypes 64 bits by default
+pub type attr_t = chtype;
 pub type PDCursesBool = u8;
 
 #[repr(C)]
@@ -38,14 +39,35 @@ pub struct WINDOW {
 
 #[link(name="pdcurses",kind="static")]
 extern "C" {
+    // ----------------------------------------------------------------------
+    //
+    //  PDCurses Function Declarations
+    //
+    //
+
+    // Standard
+
+    pub fn addch(_: chtype) -> c_int;
+    pub fn addchnstr(_: *const chtype, _: c_int) -> c_int;
+    pub fn addchstr(_: *const chtype) -> c_int;
+    pub fn addnstr(_: *const c_char, _: c_int) -> c_int;
+    pub fn addstr(_: *const c_char) -> c_int;
+    pub fn attroff(_: chtype) -> c_int;
+    pub fn attron(_: chtype) -> c_int;
+    pub fn attrset(_: chtype) -> c_int;
+    pub fn attr_get(_: *mut attr_t, _: *mut c_short, _: *mut c_void) -> c_int;
+    pub fn attr_off(_: attr_t, _: *mut c_void) -> c_int;
+    pub fn attr_on(_: attr_t, _: *mut c_void) -> c_int;
+    pub fn attr_set(_: attr_t, _: c_short, _: *mut c_void) -> c_int;
+
+    pub fn cbreak() -> c_int;
+    pub fn echo() -> c_int;
+    pub fn endwin() -> c_int;
+    pub fn getch() -> c_int;
     pub fn initscr() -> *mut WINDOW;
+    pub fn nocbreak() -> c_int;
+    pub fn nodelay(_: *mut WINDOW, _: bool) -> c_int;
     pub fn printw(_: *const c_char) -> c_int;
     pub fn refresh() -> c_int;
-    pub fn getch() -> c_int;
     pub fn wgetch(_: *mut WINDOW) -> c_int;
-    pub fn endwin() -> c_int;
-    pub fn nodelay(_: *mut WINDOW, _: bool) -> c_int;
-    pub fn cbreak() -> c_int;
-    pub fn nocbreak() -> c_int;
-    pub fn echo() -> c_int;
 }
