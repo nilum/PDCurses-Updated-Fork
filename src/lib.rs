@@ -60,6 +60,22 @@ extern "C" {
     pub fn attr_on(_: attr_t, _: *mut c_void) -> c_int;
     pub fn attr_set(_: attr_t, _: c_short, _: *mut c_void) -> c_int;
 
+    pub fn baudrate() -> c_int;
+    pub fn beep() -> c_int;
+    pub fn bkgd(_: chtype) -> c_int;
+    pub fn bkgdset(_: chtype);
+    pub fn border(_: chtype,
+                  _: chtype,
+                  _: chtype,
+                  _: chtype,
+                  _: chtype,
+                  _: chtype,
+                  _: chtype,
+                  _: chtype)
+                  -> c_int;
+    pub fn pdc_box(_: *mut WINDOW, _: chtype, _: chtype) -> c_int;
+
+
     pub fn cbreak() -> c_int;
     pub fn echo() -> c_int;
     pub fn endwin() -> c_int;
