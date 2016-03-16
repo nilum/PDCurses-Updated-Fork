@@ -8,6 +8,14 @@ specifically the win32a implementation by [Bill-Gray](https://github.com/Bill-Gr
 A native C compiler that [gcc-rs](http://alexcrichton.com/gcc-rs/gcc/index.html)
 can use to compile PDCurses.
 
+## Usage
+
+Cargo.toml
+```toml
+[dependencies]
+pdcurses = "0.1"
+```
+
 ## License
 
 Licensed under the MIT license, see [LICENSE.md](LICENSE.md)
