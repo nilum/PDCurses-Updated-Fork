@@ -5,7 +5,7 @@ fn main() {
     println!("cargo:rustc-link-lib=static=comdlg32");
     
     gcc::Config::new()
-        .file("src/PDCurses/pdcurses/addch.c") //First the common files
+        .file("src/PDCurses/pdcurses/addch.c") //Common PDCurses files
         .file("src/PDCurses/pdcurses/addchstr.c")
         .file("src/PDCurses/pdcurses/addstr.c")
         .file("src/PDCurses/pdcurses/attr.c")
@@ -47,7 +47,7 @@ fn main() {
         .file("src/PDCurses/pdcurses/touch.c")
         .file("src/PDCurses/pdcurses/util.c")
         .file("src/PDCurses/pdcurses/window.c")
-        .file("src/PDCurses/win32a/pdcclip.c") //Then the win32a implementation files
+        .file("src/PDCurses/win32a/pdcclip.c") //win32a implementation files
         .file("src/PDCurses/win32a/pdcdisp.c")
         .file("src/PDCurses/win32a/pdcgetsc.c")
         .file("src/PDCurses/win32a/pdckbd.c")
