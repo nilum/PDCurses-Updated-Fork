@@ -103,6 +103,7 @@ matrix:
 # The file appveyor_rust_install.ps1 must exist in the root directory of the repository.
 install:
 - ps: .\appveyor_rust_install.ps1
+- git submodule update --init
 
 # Alternative install command for simple configurations without build matrix (uncomment line and
 # comment above line):
