@@ -1,4 +1,4 @@
-# pdcurses-sys
+# pdcurses-sys [![Build status](https://ci.appveyor.com/api/projects/status/7quldtl11lsitu2v?svg=true)](https://ci.appveyor.com/project/ihalila/pdcurses-sys)
 
 pdcurses-sys provides Rust FFI bindings for [PDCurses](http://wmcbrine.com/pdcurses/),
 specifically the win32a implementation by [Bill-Gray](https://github.com/Bill-Gray/PDCurses).
