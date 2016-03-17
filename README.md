@@ -13,7 +13,7 @@ can use to compile PDCurses.
 Cargo.toml
 ```toml
 [dependencies]
-pdcurses = "0.1"
+pdcurses = "0.2"
 ```
 
 ## License
