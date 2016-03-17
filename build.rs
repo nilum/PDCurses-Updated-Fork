@@ -1,9 +1,9 @@
 extern crate gcc;
 
 fn main() {
-    println!("cargo:rustc-link-lib=static=gdi32");
-    println!("cargo:rustc-link-lib=static=comdlg32");
-    
+    println!("cargo:rustc-link-lib=dylib=gdi32");
+    println!("cargo:rustc-link-lib=dylib=comdlg32");
+
     gcc::Config::new()
         .file("src/PDCurses/pdcurses/addch.c") //Common PDCurses files
         .file("src/PDCurses/pdcurses/addchstr.c")
@@ -59,5 +59,3 @@ fn main() {
         .define("UTF8", Some("Y")) //Makes PDCurses ignore the system locale, and treat all narrow-character strings as UTF-8
         .compile("libpdcurses.a");
 }
-
-
