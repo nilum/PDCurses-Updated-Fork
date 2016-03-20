@@ -1,4 +1,4 @@
-# pdcurses-sys [![Build status](https://ci.appveyor.com/api/projects/status/7quldtl11lsitu2v?svg=true)](https://ci.appveyor.com/project/ihalila/pdcurses-sys) [![Crates.io](https://img.shields.io/crates/v/pdcurses-sys.svg)](https://github.com/ihalila/pdcurses-syshttps://crates.io/crates/pdcurses-sys)
+# pdcurses-sys [![Build status](https://ci.appveyor.com/api/projects/status/7quldtl11lsitu2v?svg=true)](https://ci.appveyor.com/project/ihalila/pdcurses-sys) [![Crates.io](https://img.shields.io/crates/v/pdcurses-sys.svg)](https://crates.io/crates/pdcurses-sys)
 
 pdcurses-sys provides Rust FFI bindings for [PDCurses](http://wmcbrine.com/pdcurses/),
 specifically the win32a implementation by [Bill-Gray](https://github.com/Bill-Gray/PDCurses).
