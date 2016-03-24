@@ -3,6 +3,7 @@ extern crate gcc;
 fn main() {
     println!("cargo:rustc-link-lib=dylib=gdi32");
     println!("cargo:rustc-link-lib=dylib=comdlg32");
+    println!("cargo:rustc-link-lib=dylib=user32");
 
     gcc::Config::new()
         .file("src/PDCurses/pdcurses/addch.c") //Common PDCurses files
