@@ -21,7 +21,7 @@ cl.exe is available.
 Cargo.toml
 ```toml
 [dependencies]
-pdcurses = "0.2"
+pdcurses = "0.3"
 ```
 
 ## License
