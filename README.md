@@ -8,20 +8,15 @@ specifically the win32a implementation by [Bill-Gray](https://github.com/Bill-Gr
 A native C compiler that [gcc-rs](http://alexcrichton.com/gcc-rs/gcc/index.html)
 can use to compile PDCurses.
 
-If you've installed the default Rust package for Windows, it will use the GNU
-ABI and in this case I recommend installing [MSYS2](https://msys2.github.io/),
-it makes it easy to have an up-to-date gcc that works on Windows along with
-other useful tools.
-
-If you're using the MSVC ABI you need to have Visual Studio installed so that
-cl.exe is available.
+On Windows this means that you need the Visual C++ Build Tools. Check the [rustup docs](https://github.com/rust-lang-nursery/rustup.rs/blob/master/README.md#working-with-rust-on-windows)
+for more Rust <-> Windows information.
 
 ## Usage
 
 Cargo.toml
 ```toml
 [dependencies]
-pdcurses-sys = "0.3"
+pdcurses-sys = "0.4"
 ```
 
 ## License
