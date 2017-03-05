@@ -246,7 +246,7 @@ impl ::std::default::Default for Struct_Unnamed3 {
     }
 }
 pub type SCREEN = Struct_Unnamed3;
-#[link(name = "pdcurses")]
+
 extern "C" {
     pub static mut __security_cookie: uintptr_t;
     pub static mut LINES: ::std::os::raw::c_int;
@@ -261,7 +261,7 @@ extern "C" {
     pub static mut acs_map: *mut chtype;
     pub static mut ttytype: *mut ::std::os::raw::c_char;
 }
-#[link(name = "pdcurses")]
+
 extern "C" {
     pub fn __va_start(arg1: *mut va_list, ...);
     pub fn __security_init_cookie();
