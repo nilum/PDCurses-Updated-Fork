@@ -56,7 +56,8 @@ fn main() {
         .file("src/PDCurses/win32a/pdcsetsc.c")
         .file("src/PDCurses/win32a/pdcutil.c")
         .include("src/PDCurses")
-        .define("PDC_WIDE", Some("Y")) //Build with wide-character (Unicode) support
-        .define("PDC_FORCE_UTF8", Some("Y")) //Makes PDCurses ignore the system locale, and treat all narrow-character strings as UTF-8
+        .define("PDC_WIDE", Some("Y")) // Build with wide-character (Unicode) support
+        .define("PDC_FORCE_UTF8", Some("Y")) // Makes PDCurses ignore the system locale, and treat all narrow-character strings as UTF-8
+        .define("PDC_RGB", Some("Y")) // Use RGB colors, it's what most people expect them to be
         .compile("libpdcurses.a");
 }
