@@ -5,7 +5,7 @@ fn main() {
     println!("cargo:rustc-link-lib=dylib=comdlg32");
     println!("cargo:rustc-link-lib=dylib=user32");
 
-    gcc::Config::new()
+    gcc::Build::new()
         .file("src/PDCurses/pdcurses/addch.c") //Common PDCurses files
         .file("src/PDCurses/pdcurses/addchstr.c")
         .file("src/PDCurses/pdcurses/addstr.c")
