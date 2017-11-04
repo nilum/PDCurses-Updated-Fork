@@ -5,7 +5,7 @@ specifically the win32a implementation by [Bill-Gray](https://github.com/Bill-Gr
 
 ## Requirements
 
-A native C compiler that [gcc-rs](http://alexcrichton.com/gcc-rs/gcc/index.html)
+A native C compiler that [cc-rs](https://github.com/alexcrichton/cc-rs)
 can use to compile PDCurses.
 
 On Windows this means that you need the Visual C++ Build Tools. Check the [rustup docs](https://github.com/rust-lang-nursery/rustup.rs/blob/master/README.md#working-with-rust-on-windows)
@@ -16,7 +16,7 @@ for more Rust <-> Windows information.
 Cargo.toml
 ```toml
 [dependencies]
-pdcurses-sys = "0.5"
+pdcurses-sys = "0.6"
 ```
 
 ## License
