@@ -1,7 +1,7 @@
 # pdcurses-sys [![Build status](https://ci.appveyor.com/api/projects/status/7quldtl11lsitu2v?svg=true)](https://ci.appveyor.com/project/ihalila/pdcurses-sys) [![Crates.io](https://img.shields.io/crates/v/pdcurses-sys.svg)](https://crates.io/crates/pdcurses-sys)
 
 pdcurses-sys provides Rust FFI bindings for [PDCurses](http://wmcbrine.com/pdcurses/),
-specifically the win32a implementation by [Bill-Gray](https://github.com/Bill-Gray/PDCurses).
+specifically the fork by [Bill-Gray](https://github.com/Bill-Gray/PDCurses).
 
 ## Requirements
 
@@ -17,6 +17,18 @@ Cargo.toml
 ```toml
 [dependencies]
 pdcurses-sys = "0.7"
+```
+
+## Picking a flavor
+
+pdcurses-sys supports both the win32 and win32a flavors of PDCurses. It defaults to win32a if none
+is specified. You can use Cargo features to choose which one to use:
+
+Cargo.toml
+```toml
+[dependencies.pdcurses-sys]
+version = "0.7"
+features = ["win32"]
 ```
 
 ## License
