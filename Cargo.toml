@@ -19,7 +19,7 @@ win32a = []
 win32 = []
 
 [build-dependencies]
-cc = "1.0.2"
+cc = "1.0"
 
 [dependencies]
 libc = "0.2"
