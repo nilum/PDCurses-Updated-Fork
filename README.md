@@ -16,7 +16,7 @@ for more Rust <-> Windows information.
 Cargo.toml
 ```toml
 [dependencies]
-pdcurses-sys = "0.6"
+pdcurses-sys = "0.7"
 ```
 
 ## License
