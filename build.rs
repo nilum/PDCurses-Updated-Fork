@@ -61,6 +61,7 @@ fn flavor_specifics(build: &mut cc::Build) {
     println!("cargo:rustc-link-lib=dylib=user32");
     println!("cargo:rustc-link-lib=dylib=gdi32");
     println!("cargo:rustc-link-lib=dylib=comdlg32");
+    println!("cargo:rustc-link-lib=dylib=shell32");
 
     build
         .file("src/PDCurses/win32a/pdcclip.c")
