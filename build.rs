@@ -55,7 +55,7 @@ fn main() {
     build.compile("libpdcurses.a");
 }
 
-// Use win32a if it's chosen, or if no flavor is chosen.
+// Use wingui if it's win32a is chosen, or if no flavor is chosen.
 #[cfg(any(feature = "win32a", all(not(feature="win32"), not(feature="win32a"))))]
 fn flavor_specifics(build: &mut cc::Build) {
     println!("cargo:rustc-link-lib=dylib=user32");
@@ -64,13 +64,13 @@ fn flavor_specifics(build: &mut cc::Build) {
     println!("cargo:rustc-link-lib=dylib=shell32");
 
     build
-        .file("src/PDCurses/win32a/pdcclip.c")
-        .file("src/PDCurses/win32a/pdcdisp.c")
-        .file("src/PDCurses/win32a/pdcgetsc.c")
-        .file("src/PDCurses/win32a/pdckbd.c")
-        .file("src/PDCurses/win32a/pdcscrn.c")
-        .file("src/PDCurses/win32a/pdcsetsc.c")
-        .file("src/PDCurses/win32a/pdcutil.c");
+        .file("src/PDCurses/wingui/pdcclip.c")
+        .file("src/PDCurses/wingui/pdcdisp.c")
+        .file("src/PDCurses/wingui/pdcgetsc.c")
+        .file("src/PDCurses/wingui/pdckbd.c")
+        .file("src/PDCurses/wingui/pdcscrn.c")
+        .file("src/PDCurses/wingui/pdcsetsc.c")
+        .file("src/PDCurses/wingui/pdcutil.c");
 }
 
 #[cfg(feature = "win32")]
@@ -78,11 +78,11 @@ fn flavor_specifics(build: &mut cc::Build) {
     println!("cargo:rustc-link-lib=dylib=user32");
 
     build
-        .file("src/PDCurses/win32/pdcclip.c")
-        .file("src/PDCurses/win32/pdcdisp.c")
-        .file("src/PDCurses/win32/pdcgetsc.c")
-        .file("src/PDCurses/win32/pdckbd.c")
-        .file("src/PDCurses/win32/pdcscrn.c")
-        .file("src/PDCurses/win32/pdcsetsc.c")
-        .file("src/PDCurses/win32/pdcutil.c");
+        .file("src/PDCurses/wincon/pdcclip.c")
+        .file("src/PDCurses/wincon/pdcdisp.c")
+        .file("src/PDCurses/wincon/pdcgetsc.c")
+        .file("src/PDCurses/wincon/pdckbd.c")
+        .file("src/PDCurses/wincon/pdcscrn.c")
+        .file("src/PDCurses/wincon/pdcsetsc.c")
+        .file("src/PDCurses/wincon/pdcutil.c");
 }
